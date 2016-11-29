@@ -10,7 +10,7 @@ def returnDictionary(D):
     Modifies: Nothing
     Effects:  Returns the input dictionary D unchanged.
     """
-    return
+    return D
 
 def keyInDict(D, K):
     """
@@ -18,7 +18,11 @@ def keyInDict(D, K):
     Modifies: Nothing
     Effects:  Returns True if and only if the key K is already in D.
     """
-    return
+    if K in D: 
+        return True
+    
+    else:
+        return False
 
 def returnKeyVal(D, K):
     """
@@ -26,7 +30,8 @@ def returnKeyVal(D, K):
     Modifies: Nothing
     Effects:  Returns the value associated with K in the dictionary D.
     """
-    return
+    
+    return D[K]
 
 def setKeyVal(D, K, V):
     """
@@ -35,7 +40,10 @@ def setKeyVal(D, K, V):
     Effects:  Sets the value associated with the key K in the dictionary D
               to be the value V. Returns the dictionary D.
     """
-    return
+    
+    D[K] = V
+    
+    return D
 
 def setKeyValList(D, K, V1, V2, V3, V4):
     """
@@ -45,7 +53,10 @@ def setKeyValList(D, K, V1, V2, V3, V4):
               the input dictionary D, to be a list composed of V1 through
               V4, in that order. Returns the dictionary D.
     """
-    return
+    
+    D[K] = [V1, V2, V3, V4]
+    
+    return D
 
 def asciiAssociate():
     """
@@ -56,7 +67,19 @@ def asciiAssociate():
               the associated ascii values from 97 to 122. Returns the
               dictionary asciiDict.
     """
-    return
+    asciiDict = {}
+    
+    i = 'a'
+    n = 97
+    
+    while i <= 'z':
+        
+        asciiDict[i] = n
+        
+        i = i + 1
+        n = n + 1
+        
+    return asciiDict
 
 def getColor(favoriteColors, name):
     """
@@ -66,7 +89,11 @@ def getColor(favoriteColors, name):
     Effects:  Returns the first element in the list associated with the
               key "name" in the input dictionary favoriteColors.
     """
-    return
+    
+    list_x = favoriteColors[name]    
+    
+    return list_x[0]
+                                   
 
 def translate(vocab, word, language):
     """
@@ -78,6 +105,9 @@ def translate(vocab, word, language):
               Given the input dictionary, this function returns the
               value associated with the input word and language.
     """
+    
+    
+    
     return
 
 def nestedDictionary():
@@ -88,7 +118,17 @@ def nestedDictionary():
               lowercase characters from a to z, and each key has a value
               of an empty dictionary. Returns the new dictionary D.
     """
-    return
+    
+    D = {}
+    
+    i = 'a'
+    
+    while i <= 'z':
+    
+        D[i] = {}
+        i = i + 1
+        
+    return D
 
 def nestedDictionary3D(L1, L2):
     """
@@ -99,7 +139,17 @@ def nestedDictionary3D(L1, L2):
               has keys of each item of list L2 and corresponding
               values of empty dictionaries. Returns the new dictionary D.
     """
-    return
+
+    D = {}
+    lenL1 = len(L1)
+    i = 0
+    
+    while i <= lenL1
+        D[i] = {}
+        D[i] = L2[i]
+        D[L2[i]] = {}
+
+    return D
 
 def valueFrom3D(D, K1, K2, K3):
     """
@@ -122,6 +172,9 @@ def keysIn2D(D, L1, L2):
               is associated with a dictionary that contains the last
               item of list L2 as a key.
     """
+    if 
+
+
     return
 
 def newCopy(L1):
@@ -140,5 +193,4 @@ if __name__ == '__main__':
 
     # This should print True if Function 3 is implemented correctly
     print 'goodbye' == returnKeyVal(D, 'hello')
-
 
